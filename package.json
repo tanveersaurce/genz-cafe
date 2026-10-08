@@ -1,0 +1,24 @@
+{
+  "name": "genz-cafe",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "lint": "npm run lint --workspace=server && npm run lint --workspace=client",
+    "type-check": "npm run type-check --workspace=server && npm run type-check --workspace=client",
+    "test": "npm run test --workspace=server && npm run test --workspace=client",
+    "seed:partner": "npm run seed:partner --workspace=server",
+    "seed:menu": "npm run seed:menu --workspace=server",
+    "seed:tables": "npm run seed:tables --workspace=server",
+    "seed:orders": "npm run seed:orders --workspace=server",
+    "seed:closing": "npm run seed:closing --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
