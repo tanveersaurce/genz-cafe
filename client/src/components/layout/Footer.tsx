@@ -24,10 +24,12 @@ export const Footer: React.FC = () => {
                 className="h-12 w-12 rounded-full border border-brand-gold-500 shadow-soft object-cover"
               />
               <div>
-                <span className="font-serif text-xl font-bold tracking-wider text-brand-cream-100">
-                  {siteConfig.name.toUpperCase()}
+                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">
+                  Gen-Z Cafe
                 </span>
-                <p className="font-script text-brand-gold-500 text-sm">{siteConfig.tagline}</p>
+                <span className="text-brand-gold-400 text-[10px] font-semibold tracking-[0.2em] uppercase">
+                  RESTAURANT & SOCIAL
+                </span>
               </div>
             </div>
             <p className="text-small text-brand-cream-100/70 leading-relaxed">

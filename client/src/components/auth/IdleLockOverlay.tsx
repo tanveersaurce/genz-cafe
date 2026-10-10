@@ -14,7 +14,8 @@ export const IdleLockOverlay: React.FC = () => {
   const [isLocked, setIsLocked] = useState<boolean>(false);
   const [pin, setPin] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [usePasswordFallback, setUsePasswordFallback] = useState<boolean>(false);
+  const isPinEligible = ['waiter', 'cashier', 'kitchen'].includes(user?.role || '');
+  const [usePasswordFallback, setUsePasswordFallback] = useState<boolean>(!isPinEligible);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [shake, setShake] = useState<boolean>(false);
@@ -27,6 +28,12 @@ export const IdleLockOverlay: React.FC = () => {
   const resetTimer = useCallback(() => {
     lastActivityRef.current = Date.now();
   }, []);
+
+  useEffect(() => {
+    if (user && !['waiter', 'cashier', 'kitchen'].includes(user.role)) {
+      setUsePasswordFallback(true);
+    }
+  }, [user]);
 
   useEffect(() => {
     if (!isAuthenticated || isExempt) {
@@ -48,6 +55,9 @@ export const IdleLockOverlay: React.FC = () => {
           setPin('');
           setPassword('');
           setErrorMessage(null);
+          if (user && !['waiter', 'cashier', 'kitchen'].includes(user.role)) {
+            setUsePasswordFallback(true);
+          }
         }
       }
     }, 5000);

@@ -21,6 +21,7 @@ interface SeedItem {
   basePrice: number; // in paise
   variants?: Array<{ name: string; price: number; isDefault: boolean }>;
   gstRate?: GstRate;
+  image?: { full: string; thumbnail: string };
   tags?: MenuTag[];
   isFeatured?: boolean;
   preparationMinutes?: number;
@@ -68,6 +69,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Double Shot (Doppio)', price: 16000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/classic-espresso_1791552801412_full.webp',
+      thumbnail: '/uploads/menu/classic-espresso_1791552801412_thumb.webp',
+    },
     tags: ['bestseller'],
     isFeatured: true,
     preparationMinutes: 4,
@@ -84,6 +89,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Large (350ml)', price: 23000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/hazelnut-cappuccino_1791554417799_full.webp',
+      thumbnail: '/uploads/menu/hazelnut-cappuccino_1791554417799_thumb.webp',
+    },
     tags: ['chef_special', 'bestseller'],
     isFeatured: true,
     preparationMinutes: 5,
@@ -100,6 +109,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Large', price: 25000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/caf-mocha_1791554418304_full.webp',
+      thumbnail: '/uploads/menu/caf-mocha_1791554418304_thumb.webp',
+    },
     tags: ['new'],
     isFeatured: false,
     preparationMinutes: 6,
@@ -114,6 +127,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 22000, // ₹220
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/vanilla-sweet-cream-cold-brew_1791553626241_full.webp',
+      thumbnail: '/uploads/menu/vanilla-sweet-cream-cold-brew_1791553626241_thumb.webp',
+    },
     tags: ['bestseller'],
     isFeatured: true,
     preparationMinutes: 5,
@@ -130,6 +147,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Jumbo (500ml)', price: 31000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/biscoff-caramel-frappe_1791554418878_full.webp',
+      thumbnail: '/uploads/menu/biscoff-caramel-frappe_1791554418878_thumb.webp',
+    },
     tags: ['bestseller', 'chef_special'],
     isFeatured: true,
     preparationMinutes: 7,
@@ -142,6 +163,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 20000, // ₹200
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/iced-vietnamese-shakerato_1791554419267_full.webp',
+      thumbnail: '/uploads/menu/iced-vietnamese-shakerato_1791554419267_thumb.webp',
+    },
     tags: ['new'],
     isFeatured: false,
     preparationMinutes: 5,
@@ -156,6 +181,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 24000, // ₹240
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/crispy-paneer-makhani-burger_1791554419555_full.webp',
+      thumbnail: '/uploads/menu/crispy-paneer-makhani-burger_1791554419555_thumb.webp',
+    },
     tags: ['bestseller'],
     isFeatured: true,
     preparationMinutes: 12,
@@ -168,6 +197,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'non_veg',
     basePrice: 28000, // ₹280
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/smoky-bbq-grilled-chicken-sandwich_1791554419850_full.webp',
+      thumbnail: '/uploads/menu/smoky-bbq-grilled-chicken-sandwich_1791554419850_thumb.webp',
+    },
     tags: ['chef_special'],
     isFeatured: true,
     preparationMinutes: 15,
@@ -180,6 +213,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 26000, // ₹260
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/truffle-mushroom-cheese-melt_1791554420307_full.webp',
+      thumbnail: '/uploads/menu/truffle-mushroom-cheese-melt_1791554420307_thumb.webp',
+    },
     tags: ['chef_special'],
     isFeatured: false,
     preparationMinutes: 12,
@@ -192,6 +229,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'egg',
     basePrice: 21000, // ₹210
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/egg-jalape-o-breakfast-brioche_1791554420515_full.webp',
+      thumbnail: '/uploads/menu/egg-jalape-o-breakfast-brioche_1791554420515_thumb.webp',
+    },
     tags: ['spicy'],
     isFeatured: false,
     preparationMinutes: 10,
@@ -210,6 +251,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Large Bucket', price: 21000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/peri-peri-crinkle-fries_1791555047041_full.webp',
+      thumbnail: '/uploads/menu/peri-peri-crinkle-fries_1791555047041_thumb.webp',
+    },
     tags: ['spicy', 'bestseller'],
     isFeatured: true,
     preparationMinutes: 8,
@@ -222,6 +267,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 22000, // ₹220
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/cheesy-jalape-o-poppers_1791554421128_full.webp',
+      thumbnail: '/uploads/menu/cheesy-jalape-o-poppers_1791554421128_thumb.webp',
+    },
     tags: ['spicy'],
     isFeatured: false,
     preparationMinutes: 9,
@@ -234,6 +283,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'non_veg',
     basePrice: 27000, // ₹270
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/crispy-chicken-tenders_1791554421429_full.webp',
+      thumbnail: '/uploads/menu/crispy-chicken-tenders_1791554421429_thumb.webp',
+    },
     tags: ['bestseller'],
     isFeatured: true,
     preparationMinutes: 12,
@@ -252,6 +305,10 @@ const ITEMS: SeedItem[] = [
       { name: 'Brownie à la Mode (with Ice Cream)', price: 23000, isDefault: false },
     ],
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/warm-belgian-chocolate-brownie_1791554421814_full.webp',
+      thumbnail: '/uploads/menu/warm-belgian-chocolate-brownie_1791554421814_thumb.webp',
+    },
     tags: ['bestseller'],
     isFeatured: true,
     preparationMinutes: 5,
@@ -264,6 +321,10 @@ const ITEMS: SeedItem[] = [
     foodType: 'veg',
     basePrice: 25000, // ₹250
     gstRate: 5,
+    image: {
+      full: '/uploads/menu/lotus-biscoff-baked-cheesecake_1791554422067_full.webp',
+      thumbnail: '/uploads/menu/lotus-biscoff-baked-cheesecake_1791554422067_thumb.webp',
+    },
     tags: ['chef_special', 'bestseller'],
     isFeatured: true,
     preparationMinutes: 4,
@@ -340,6 +401,7 @@ async function seedMenu() {
         basePrice,
         variants: itemData.variants || [],
         gstRate: itemData.gstRate ?? 5,
+        image: itemData.image,
         tags: itemData.tags || [],
         isFeatured: itemData.isFeatured ?? false,
         isAvailable: true,
@@ -388,6 +450,9 @@ async function seedMenu() {
       item.isFeatured = itemData.isFeatured ?? false;
       item.sortOrder = itemData.sortOrder;
       item.preparationMinutes = itemData.preparationMinutes;
+      if (itemData.image && (!item.image || !item.image.thumbnail)) {
+        item.image = itemData.image;
+      }
       item.archivedAt = null;
       item.isActive = true;
       await item.save();

@@ -97,7 +97,7 @@ export const Modal: React.FC<ModalProps> = ({
 
   const modalContent = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
       role="presentation"
     >
       {/* Backdrop */}
@@ -115,7 +115,7 @@ export const Modal: React.FC<ModalProps> = ({
         aria-label={title}
         tabIndex={-1}
         className={cn(
-          'relative w-full rounded-card bg-brand-cream-50 p-6 shadow-soft-lg border border-brand-cream-300 text-left transition-all duration-base z-10',
+          'relative w-full max-h-[92vh] flex flex-col rounded-card bg-brand-cream-50 p-6 shadow-soft-lg border border-brand-cream-300 text-left transition-all duration-base z-10 my-auto',
           maxWidths[maxWidth]
         )}
       >
@@ -124,14 +124,14 @@ export const Modal: React.FC<ModalProps> = ({
             type="button"
             onClick={onClose}
             aria-label="Close dialog"
-            className="absolute top-5 right-5 p-1 rounded-full text-brand-ink-500 hover:text-brand-ink-900 hover:bg-brand-cream-200 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold-500"
+            className="absolute top-5 right-5 p-1 rounded-full text-brand-ink-500 hover:text-brand-ink-900 hover:bg-brand-cream-200 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold-500 z-20"
           >
             <X className="h-5 w-5" />
           </button>
         )}
 
         {title && (
-          <div className="mb-4 pr-8">
+          <div className="mb-4 pr-8 shrink-0">
             <h2 className="font-serif text-h3 font-semibold text-brand-green-900">{title}</h2>
             {description && (
               <p className="mt-1 text-small text-brand-ink-500">{description}</p>
@@ -139,7 +139,7 @@ export const Modal: React.FC<ModalProps> = ({
           </div>
         )}
 
-        <div className="mt-2">{children}</div>
+        <div className="mt-2 flex-1 overflow-y-auto pr-1 -mr-1">{children}</div>
       </div>
     </div>
   );

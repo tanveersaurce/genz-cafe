@@ -134,7 +134,7 @@ export const CategoryModal: React.FC<CategoryModalProps> = ({
           onChange={(e) => setIsActive(e.target.checked)}
         />
 
-        <div className="flex justify-end gap-3 pt-4 border-t border-brand-cream-300">
+        <div className="sticky bottom-0 bg-brand-cream-50 pt-4 pb-1 border-t border-brand-cream-300 flex justify-end gap-3 z-20 mt-4 shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.06)]">
           <Button variant="ghost" type="button" onClick={onClose}>
             Cancel
           </Button>
